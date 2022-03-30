@@ -11,13 +11,20 @@
         android:id="@+id/txtAcerca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="16dp"
         android:fontFamily="@font/candal"
         android:text="Acerca De:"
         android:textColor="#FFFFFF"
         android:textSize="60sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="112dp" />
+        app:layout_constraintBottom_toTopOf="@+id/txtContenido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPerfil"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/btnHome"
@@ -90,6 +97,7 @@
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="47dp"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="6dp"
@@ -97,6 +105,7 @@
         app:layout_constraintEnd_toStartOf="@+id/btnVolver"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtContenido"
+        app:layout_constraintVertical_bias="0.812"
         app:srcCompat="@drawable/logo_upb" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
