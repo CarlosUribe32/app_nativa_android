@@ -11,9 +11,9 @@
         android:id="@+id/txtAcerca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="37dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="29dp"
         android:layout_marginBottom="16dp"
         android:fontFamily="@font/candal"
         android:text="Acerca De:"
@@ -21,53 +21,17 @@
         android:textSize="60sp"
         app:layout_constraintBottom_toTopOf="@+id/txtContenido"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnPerfil"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/btnHome"
-        android:layout_width="64dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="17dp"
-        android:layout_marginEnd="220dp"
-        android:layout_marginBottom="63dp"
-        android:hint="boton a home"
-        app:icon="@drawable/casa__1_"
-        app:layout_constraintBottom_toTopOf="@+id/txtAcerca"
-        app:layout_constraintEnd_toStartOf="@+id/btnPerfil"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints"
-        tools:text=" " />
-
-    <Button
-        android:id="@+id/btnPerfil"
-        android:layout_width="68dp"
-        android:layout_height="62dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="65dp"
-        android:hint="boton a perfil"
-        app:icon="@drawable/usuario_1_1"
-        app:layout_constraintBottom_toTopOf="@+id/txtAcerca"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnHome"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/txtContenido"
         android:layout_width="373dp"
         android:layout_height="326dp"
-        android:layout_marginStart="18dp"
+        android:layout_marginStart="19dp"
         android:layout_marginTop="52dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="19dp"
         android:text="Somos un grupo de estuidantes de la Universidad Pontifica Bolivariana, creamos esta aplicación con el fin de tener una comunidad para videojuegos donde juntos aprendamos y nos divertamos jugando nuestros juegos favoritos."
         android:textColor="#FDFDFD"
         android:textSize="24sp"
@@ -107,5 +71,29 @@
         app:layout_constraintTop_toBottomOf="@+id/txtContenido"
         app:layout_constraintVertical_bias="0.812"
         app:srcCompat="@drawable/logo_upb" />
+
+    <ImageButton
+        android:id="@+id/btnHome"
+        android:layout_width="52dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#04012D"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/casa__1_"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/btnPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="26dp"
+        android:backgroundTint="#04012D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/usuario_1_1"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
