@@ -37,6 +37,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        creditos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Creditos.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
