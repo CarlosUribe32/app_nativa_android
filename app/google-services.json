@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1000059981956",
+    "firebase_url": "https://tilt-9c79c-default-rtdb.firebaseio.com",
+    "project_id": "tilt-9c79c",
+    "storage_bucket": "tilt-9c79c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1000059981956:android:523dc515b0f7fc7589f2d1",
+        "android_client_info": {
+          "package_name": "co.upb.edu.Tilt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1000059981956-r6subenuiueb1qpjl25lsgo2vgdmntbq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPcD6Gh50xHib9KTJndiOa0c0cEgQnGQc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1000059981956-r6subenuiueb1qpjl25lsgo2vgdmntbq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
