@@ -4,6 +4,163 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#04012D"
     tools:context=".perfilSecundario">
+
+    <ImageView
+        android:id="@+id/img_perfil_insignia6"
+        android:layout_width="86dp"
+        android:layout_height="66dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.363"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.926"
+        app:srcCompat="@drawable/insignia_con_una_estrella" />
+
+    <ImageView
+        android:id="@+id/img_perfil_insignia5"
+        android:layout_width="86dp"
+        android:layout_height="66dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.926"
+        app:srcCompat="@drawable/insignia_con_una_estrella" />
+
+    <ImageView
+        android:id="@+id/img_perfil_insignia7"
+        android:layout_width="86dp"
+        android:layout_height="66dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.627"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.926"
+        app:srcCompat="@drawable/insignia_con_una_estrella" />
+
+    <ImageView
+        android:id="@+id/img_perfil_insignia8"
+        android:layout_width="86dp"
+        android:layout_height="66dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.892"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.926"
+        app:srcCompat="@drawable/insignia_con_una_estrella" />
+
+    <TextView
+        android:id="@+id/text_perfilSecundario_insignias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/belgrano"
+        android:text="INSIGNIAS"
+        android:textColor="#55FFE2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.765" />
+
+    <ImageView
+        android:id="@+id/img_perfilSecundario_fotoPerfil"
+        android:layout_width="125dp"
+        android:layout_height="122dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.06"
+        app:srcCompat="@drawable/usuario__2_" />
+
+    <TextView
+        android:id="@+id/text_perfilSecundario_Estado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="504dp"
+        android:fontFamily="@font/belgrano"
+        android:text="En Linea"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_perfilSecundario_fotoPerfil"
+        app:layout_constraintVertical_bias="0.42" />
+
+    <TextView
+        android:id="@+id/text_perfilSecundario_NombreUsuario"
+        android:layout_width="157dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="36dp"
+        android:fontFamily="@font/belgrano"
+        android:text="Nombre de Usuario"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintStart_toEndOf="@+id/img_perfilSecundario_fotoPerfil"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.104" />
+
+    <TextView
+        android:id="@+id/text_perfilSecundario_seguidores"
+        android:layout_width="236dp"
+        android:layout_height="48dp"
+        android:background="#080350"
+        android:fontFamily="@font/belgrano"
+        android:gravity="center"
+        android:text="Seguidores"
+        android:textColor="#55FFE2"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.434" />
+
+    <TextView
+        android:id="@+id/text_perfilSecundario_numeroSeguidores"
+        android:layout_width="176dp"
+        android:layout_height="48dp"
+        android:background="#080350"
+        android:fontFamily="@font/belgrano"
+        android:gravity="center"
+        android:text="xxxxx"
+        android:textColor="#55FFE2"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/text_perfilSecundario_seguidores"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.434" />
+
+    <TextView
+        android:id="@+id/text_perfilSecundario_infoPerfil"
+        android:layout_width="354dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="52dp"
+        android:fontFamily="@font/belgrano"
+        android:gravity="center"
+        android:text="ejemplo@gmail.com          www.youtube.com/c/canal"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.552" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
