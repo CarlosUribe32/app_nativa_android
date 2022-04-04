@@ -13,6 +13,12 @@
             android:name=".Home"
             android:exported="false" />
         <activity
+            android:name=".perfilSecundario"
+            android:exported="false" />
+        <activity
+            android:name=".perfil"
+            android:exported="false" />
+        <activity
             android:name=".Registro"
             android:exported="false" />
         <activity
