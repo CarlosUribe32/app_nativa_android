@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#04012D"
+    android:backgroundTint="#04012D"
+    tools:context=".Home">
+
+    <ImageButton
+        android:id="@+id/btnPerfil2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="28dp"
+        android:backgroundTint="#04012D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/usuario_1_1"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/txtAcerca2"
+        android:layout_width="141dp"
+        android:layout_height="120dp"
+        android:fontFamily="@font/baloo_tammudu"
+        android:text="Tilt"
+        android:textColor="#FFFFFF"
+        android:textSize="84sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/txtAcerca3"
+        android:layout_width="189dp"
+        android:layout_height="61dp"
+        android:fontFamily="@font/baloo_tammudu"
+        android:text="Tilters top"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="374dp" />
+
+    <TextView
+        android:id="@+id/txtAcerca4"
+        android:layout_width="189dp"
+        android:layout_height="61dp"
+        android:fontFamily="@font/baloo_tammudu"
+        android:text="Noticias"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="228dp"
+        tools:layout_editor_absoluteY="374dp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="29dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtAcerca3"
+        app:layout_constraintEnd_toStartOf="@+id/imageView6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAcerca2"
+        app:srcCompat="@drawable/captura_de_pantalla_2022_04_03_212937" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="150dp"
+        android:layout_height="194dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginEnd="83dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtAcerca3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/btnPerfil2"
+        app:srcCompat="@drawable/minecraft_preview" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

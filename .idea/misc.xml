@@ -4,10 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Carlos/Documents/7_Semestre/Aplicaciones_Moviles/Aplicativo_Nativo/app_nativa_android/app/src/main/res/layout/activity_acerca_de.xml" value="0.25" />
+        <entry key="..\:/Users/Carlos/Documents/7_Semestre/Aplicaciones_Moviles/Aplicativo_Nativo/app_nativa_android/app/src/main/res/layout/activity_creditos.xml" value="0.14947916666666666" />
         <entry key="..\:/Users/Carlos/Documents/7_Semestre/Aplicaciones_Moviles/Aplicativo_Nativo/app_nativa_android/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/Carlos/Documents/7_Semestre/Aplicaciones_Moviles/Aplicativo_Nativo/app_nativa_android/app/src/main/res/layout/activity_main.xml" value="0.25" />
+<<<<<<< HEAD
         <entry key="..\:/Users/Carlos/Documents/7_Semestre/Aplicaciones_Moviles/Aplicativo_Nativo/app_nativa_android/app/src/main/res/layout/activity_registro.xml" value="0.15353260869565216" />
         <entry key="..\:/Users/PC/Documents/app_nativa_android/app/src/main/res/layout/activity_acerca_de.xml" value="0.17074275362318841" />
+=======
+        <entry key="..\:/Users/Carlos/Documents/7_Semestre/Aplicaciones_Moviles/Aplicativo_Nativo/app_nativa_android/app/src/main/res/layout/activity_registro.xml" value="0.25" />
+>>>>>>> 9537df1793023724a2a4b91cd4bb3e5a96460735
         <entry key="..\:/Users/PC/Documents/app_nativa_android/app/src/main/res/layout/activity_creditos.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/PC/Documents/app_nativa_android/app/src/main/res/layout/activity_lista_seguidores.xml" value="0.22" />
         <entry key="..\:/Users/PC/Documents/app_nativa_android/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
@@ -15,6 +20,7 @@
         <entry key="..\:/Users/PC/Documents/app_nativa_android/app/src/main/res/layout/activity_perfil_secundario.xml" value="0.22" />
         <entry key="..\:/Users/jeanp/Documents/app_nativa_android/app/src/main/res/layout/activity_acerca_de.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/jeanp/Documents/app_nativa_android/app/src/main/res/layout/activity_creditos.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/jeanp/Documents/app_nativa_android/app/src/main/res/layout/activity_home.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/jeanp/Documents/app_nativa_android/app/src/main/res/layout/activity_login.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/jeanp/Documents/app_nativa_android/app/src/main/res/layout/activity_main.xml" value="0.24547101449275363" />
       </map>
