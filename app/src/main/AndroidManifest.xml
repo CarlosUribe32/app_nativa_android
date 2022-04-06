@@ -13,6 +13,9 @@
             android:name=".Home"
             android:exported="false" />
         <activity
+            android:name=".ListaSeguidores"
+            android:exported="false" />
+        <activity
             android:name=".perfilSecundario"
             android:exported="false" />
         <activity
