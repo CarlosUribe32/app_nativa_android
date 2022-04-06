@@ -50,6 +50,7 @@ public class Registro extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Registro.this, Login.class);
                 startActivity(intent);
+                Registro.this.finish();
             }
         });
         registrar.setOnClickListener(new View.OnClickListener() {
@@ -67,32 +68,60 @@ public class Registro extends AppCompatActivity {
 
                 if(!TextUtils.isEmpty(sCorreo) && !TextUtils.isEmpty(sUsuario) && !TextUtils.isEmpty(sPassword)){
                     Usuario user = new Usuario(sCorreo, sUsuario, sPassword);
-                    losUsuariosBD.child(sUsuario).setValue(user);
-                    losEmailsDB.child("emails").addValueEventListener(new ValueEventListener() {
+
+                    losUsuariosBD.child(sUsuario).addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            if(!dataSnapshot.exists()){
-                                listaEmails = new ArrayList<String>();
-                                listaEmails.add(sCorreo);
-                                losEmailsDB.child("emails").setValue(listaEmails);
-                                existeEmail[0] = true;
+                            if(dataSnapshot.exists()){
+                                if(!existeEmail[0])
+                                    Toast.makeText(Registro.this, "Este usuario ya esta registrado", Toast.LENGTH_LONG).show();
                             }
                             else{
-                                listaEmails = (List<String>) dataSnapshot.getValue();
-                                if(!existeEmail[0]){
-                                    listaEmails.add(sCorreo);
-                                    losEmailsDB.child("emails").setValue(listaEmails);
-                                }
-                                existeEmail[0] = true;
+                                losEmailsDB.child("emails").addValueEventListener(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                        if(!dataSnapshot.exists()){
+                                            listaEmails = new ArrayList<String>();
+                                            listaEmails.add(sCorreo);
+                                            losUsuariosBD.child(sUsuario).setValue(user);
+                                            losEmailsDB.child("emails").setValue(listaEmails);
+                                            Toast.makeText(Registro.this, "Usuario Registrado", Toast.LENGTH_LONG).show();
+                                            existeEmail[0] = true;
+                                            Intent intent = new Intent(Registro.this, Home.class);
+                                            startActivity(intent);
+                                            Registro.this.finish();
+                                        }
+                                        else{
+                                            listaEmails = (List<String>) dataSnapshot.getValue();
+                                            if(!existeEmail[0]){
+                                                if(listaEmails.contains(sCorreo)){
+                                                    Toast.makeText(Registro.this, "Este correo ya esta registrado", Toast.LENGTH_LONG).show();
+                                                }
+                                                else{
+                                                    losUsuariosBD.child(sUsuario).setValue(user);
+                                                    listaEmails.add(sCorreo);
+                                                    losEmailsDB.child("emails").setValue(listaEmails);
+                                                    Toast.makeText(Registro.this, "Usuario Registrado", Toast.LENGTH_LONG).show();
+                                                    Intent intent = new Intent(Registro.this, Home.class);
+                                                    startActivity(intent);
+                                                    Registro.this.finish();
+                                                }
+                                            }
+                                            existeEmail[0] = true;
+                                        }
+                                    }
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                    }
+                                });
                             }
                         }
-
                         @Override
                         public void onCancelled(@NonNull DatabaseError databaseError) {
 
                         }
                     });
-                    Toast.makeText(Registro.this, "Usuario registrado", Toast.LENGTH_LONG).show();
                 }
                 else{
                     Toast.makeText(Registro.this, "Complete todos los campos", Toast.LENGTH_LONG).show();
