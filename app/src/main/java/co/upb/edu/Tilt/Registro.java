@@ -87,7 +87,9 @@ public class Registro extends AppCompatActivity {
                                             losEmailsDB.child("emails").setValue(listaEmails);
                                             Toast.makeText(Registro.this, "Usuario Registrado", Toast.LENGTH_LONG).show();
                                             existeEmail[0] = true;
+
                                             Intent intent = new Intent(Registro.this, Home.class);
+                                            intent.putExtra(MainActivity.usuarioActual, sUsuario);
                                             startActivity(intent);
                                             Registro.this.finish();
                                         }
@@ -102,7 +104,9 @@ public class Registro extends AppCompatActivity {
                                                     listaEmails.add(sCorreo);
                                                     losEmailsDB.child("emails").setValue(listaEmails);
                                                     Toast.makeText(Registro.this, "Usuario Registrado", Toast.LENGTH_LONG).show();
+
                                                     Intent intent = new Intent(Registro.this, Home.class);
+                                                    intent.putExtra(MainActivity.usuarioActual, sUsuario);
                                                     startActivity(intent);
                                                     Registro.this.finish();
                                                 }

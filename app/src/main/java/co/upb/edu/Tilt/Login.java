@@ -74,6 +74,7 @@ public class Login extends AppCompatActivity {
                                     if(dataSnapshot.child("pass").getValue().toString().equals(sPassword)){
                                         Toast.makeText(Login.this, "Bienvenido "+sUsuario, Toast.LENGTH_LONG).show();
                                         Intent intent = new Intent(Login.this, Home.class);
+                                        intent.putExtra(MainActivity.usuarioActual, sUsuario);
                                         startActivity(intent);
                                     }
                                     else{
