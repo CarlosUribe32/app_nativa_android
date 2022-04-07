@@ -12,10 +12,14 @@
         android:id="@+id/btnPerfil2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="28dp"
+        android:layout_marginBottom="88dp"
         android:backgroundTint="#04012D"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtAcerca2"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/usuario_1_1"
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
@@ -24,64 +28,207 @@
         android:id="@+id/txtAcerca2"
         android:layout_width="141dp"
         android:layout_height="120dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="32dp"
         android:fontFamily="@font/baloo_tammudu"
         android:text="Tilt"
         android:textColor="#FFFFFF"
         android:textSize="84sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
+        app:layout_constraintEnd_toStartOf="@+id/btnPerfil2"
+        app:layout_constraintHorizontal_bias="0.62"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/txtAcerca3"
         android:layout_width="189dp"
         android:layout_height="61dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="11dp"
         android:fontFamily="@font/baloo_tammudu"
         android:text="Tilters top"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="374dp" />
+        app:layout_constraintBottom_toTopOf="@+id/imageView9"
+        app:layout_constraintEnd_toStartOf="@+id/txtAcerca4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/txtAcerca4"
         android:layout_width="189dp"
         android:layout_height="61dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="19dp"
         android:fontFamily="@font/baloo_tammudu"
         android:text="Noticias"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="228dp"
-        tools:layout_editor_absoluteY="374dp" />
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtAcerca3"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+        tools:ignore="MissingConstraints" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="17dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginBottom="29dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtAcerca3"
-        app:layout_constraintEnd_toStartOf="@+id/imageView6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtAcerca2"
-        app:srcCompat="@drawable/captura_de_pantalla_2022_04_03_212937" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="150dp"
-        android:layout_height="194dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="77dp"
-        android:layout_marginEnd="83dp"
-        android:layout_marginBottom="28dp"
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="406dp"
+        android:layout_height="225dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="3dp"
+        android:autofillHints="Contenedot"
+        android:scrollbars="none"
         app:layout_constraintBottom_toTopOf="@+id/txtAcerca3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/btnPerfil2"
-        app:srcCompat="@drawable/minecraft_preview" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAcerca2"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="163dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/captura_de_pantalla_2022_04_03_212937" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="150dp"
+                android:layout_height="194dp"
+                app:srcCompat="@drawable/minecraft_preview" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="195dp"
+                app:srcCompat="@drawable/gta" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="161dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="15dp"
+        android:background="#913737"
+        android:backgroundTint="#25E1C1"
+        android:bottomRightRadius="10dp"
+        android:drawableRight="@drawable/copa_de_trofeo_silueta"
+        android:fontFamily="@font/baloo_tamma"
+        android:text="Torneos"
+        android:textSize="24sp"
+        app:barrierMargin="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView9"
+        app:layout_constraintTop_toBottomOf="@+id/txtAcerca4" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="161dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="23dp"
+        android:background="#913737"
+        android:backgroundTint="#25E1C1"
+        android:bottomRightRadius="10dp"
+        android:drawableRight="@drawable/fuego"
+        android:fontFamily="@font/baloo_tamma"
+        android:text="Tendencia"
+        android:textSize="24sp"
+        app:barrierMargin="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView12"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="161dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="32dp"
+        android:background="#913737"
+        android:backgroundTint="#25E1C1"
+        android:bottomRightRadius="10dp"
+        android:drawableRight="@drawable/innovacion__3_"
+        android:fontFamily="@font/baloo_tamma"
+        android:text="NOVEDADES"
+        android:textSize="20sp"
+        app:barrierMargin="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView12"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="96dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView12"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAcerca3"
+        app:srcCompat="@drawable/untitled_design" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="105dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintHorizontal_bias="0.305"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView12"
+        app:srcCompat="@drawable/untitled_design__1_" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="100dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView10"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9"
+        app:srcCompat="@drawable/untitled_design__2_" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
