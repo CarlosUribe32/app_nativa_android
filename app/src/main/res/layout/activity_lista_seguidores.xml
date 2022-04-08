@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="40dp"
         android:backgroundTint="#04012D"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView_listaSeguidos"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView_listaSeguidores"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/usuario_1_1"
@@ -26,23 +26,18 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
         android:backgroundTint="#04012D"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView_listaSeguidos"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView_listaSeguidores"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/casa__1_"
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
     <ScrollView
-        android:id="@+id/scrollView_listaSeguidos"
+        android:id="@+id/scrollView_listaSeguidores"
         android:layout_width="match_parent"
         android:layout_height="620dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-<<<<<<< HEAD
-        app:layout_constraintTop_toBottomOf="@+id/btnPerfilHome">
-=======
-        app:layout_constraintTop_toBottomOf="@+id/btn_listaSeguidos_perfil">
->>>>>>> Nico-3
+        app:layout_constraintStart_toStartOf="parent">
 
         <TableLayout
             android:layout_width="match_parent"
