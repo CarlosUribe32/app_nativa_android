@@ -28,14 +28,14 @@ public class perfil extends AppCompatActivity {
         Button btn_perfil_tiltpoints = (Button) findViewById(R.id.btn_perfil_Tiltpoints);
         Button btn_perfil_seguidos = (Button) findViewById(R.id.btn_perfil_seguidos);
 
-        inicializarBotones(btn_perfil_home, btn_perfil_seguidores, btn_perfil_seguidos, btn_perfil_tiltpoints);
+        inicializarBotones(btn_perfil_home, btn_perfil_seguidores, btn_perfil_seguidos, btn_perfil_tiltpoints, usuario);
 
         //Vista - User
         actualizarUsuario(usuario);
 
 
     }
-    private  void inicializarBotones (ImageButton home, Button seguidores, Button seguidos, Button tiltpoints){
+    private  void inicializarBotones (ImageButton home, Button seguidores, Button seguidos, Button tiltpoints, String usuario){
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,6 +48,7 @@ public class perfil extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(perfil.this, ListaSeguidores.class);
+                intent.putExtra(MainActivity.usuarioActual, usuario);
                 startActivity(intent);
             }
         });
@@ -56,6 +57,7 @@ public class perfil extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(perfil.this, ListaSeguidos.class);
+                intent.putExtra(MainActivity.usuarioActual, usuario);
                 startActivity(intent);
             }
         });

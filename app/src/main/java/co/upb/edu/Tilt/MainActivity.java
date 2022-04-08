@@ -9,6 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     public static final String usuarioActual = "usuarioActual";
+    public static final String usuarioSeleccionado = "usuarioSeleccionado";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
