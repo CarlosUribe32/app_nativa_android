@@ -8,6 +8,18 @@
     android:background="#04012D"
     tools:context=".perfil">
 
+    <ImageButton
+        android:id="@+id/btn_perfil_home"
+        android:layout_width="48dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#04012D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/casa__1_"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
     <ImageView
         android:id="@+id/img_perfil_insignia2"
         android:layout_width="86dp"

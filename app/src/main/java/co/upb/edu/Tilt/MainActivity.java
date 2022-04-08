@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         acerca.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, AcercaDe.class);
+                Intent intent = new Intent(MainActivity.this, perfil.class);
                 startActivity(intent);
             }
         });
