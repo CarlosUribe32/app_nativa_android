@@ -184,7 +184,7 @@
         android:drawableRight="@drawable/innovacion__3_"
         android:fontFamily="@font/baloo_tamma"
         android:text="NOVEDADES"
-        android:textSize="20sp"
+        android:textSize="22sp"
         app:barrierMargin="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
