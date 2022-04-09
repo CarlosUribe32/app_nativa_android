@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class perfil extends AppCompatActivity {
 
@@ -15,12 +18,20 @@ public class perfil extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
 
+        //Recibe usuario
+        Intent thisIntent = getIntent();
+        String usuario = thisIntent.getStringExtra(MainActivity.usuarioActual);
+
+        //Botones
         ImageButton btn_perfil_home = (ImageButton) findViewById(R.id.btn_perfil_home);
         Button btn_perfil_seguidores = (Button) findViewById(R.id.btn_perfil_seguidores);
         Button btn_perfil_tiltpoints = (Button) findViewById(R.id.btn_perfil_Tiltpoints);
         Button btn_perfil_seguidos = (Button) findViewById(R.id.btn_perfil_seguidos);
 
         inicializarBotones(btn_perfil_home, btn_perfil_seguidores, btn_perfil_seguidos, btn_perfil_tiltpoints);
+
+        //Vista - User
+        actualizarUsuario(usuario);
 
 
     }
@@ -55,5 +66,9 @@ public class perfil extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+    private void actualizarUsuario(String usuario){
+        TextView txtUser = (TextView) findViewById(R.id.text_perfil_NombreUsuario);
+        txtUser.setText((CharSequence) usuario);
     }
 }
