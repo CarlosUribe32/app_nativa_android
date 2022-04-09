@@ -4,6 +4,140 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#04012D"
     tools:context=".Tiltpoints">
+
+    <ImageButton
+        android:id="@+id/imgButton_tiltpoints_perfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="44dp"
+        android:backgroundTint="#04012D"
+        app:layout_constraintBottom_toTopOf="@+id/txt_tiltpoints_titulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/usuario_1_1"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/txt_tiltpoints_titulo"
+        android:layout_width="317dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="72dp"
+        android:fontFamily="@font/baloo_tammudu"
+        android:gravity="center"
+        android:text="Tiltpoints"
+        android:textColor="#FFFFFF"
+        android:textSize="70sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/img_tiltpoints_cofre"
+        android:layout_width="156dp"
+        android:layout_height="133dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_tiltpoints_1"
+        app:srcCompat="@drawable/cofre_epico_5000_monedas_removebg_preview" />
+
+    <Button
+        android:id="@+id/btn_tiltpoints_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#55ffe2"
+        android:text="100.000"
+        android:textColor="#04012D"
+        app:layout_constraintEnd_toEndOf="@+id/img_tiltpoints_cofre3"
+        app:layout_constraintStart_toStartOf="@+id/img_tiltpoints_cofre3"
+        app:layout_constraintTop_toBottomOf="@+id/img_tiltpoints_cofre3" />
+
+    <Button
+        android:id="@+id/btn_tiltpoints_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#55ffe2"
+        android:text="1.000"
+        android:textColor="#04012D"
+        app:layout_constraintEnd_toEndOf="@+id/img_tiltpoints_cofre2"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="@+id/img_tiltpoints_cofre2"
+        app:layout_constraintTop_toBottomOf="@+id/img_tiltpoints_cofre2" />
+
+    <ImageView
+        android:id="@+id/img_tiltpoints_cofre1"
+        android:layout_width="156dp"
+        android:layout_height="133dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_tiltpoints_titulo"
+        app:srcCompat="@drawable/cofre_epico_5000_monedas_removebg_preview" />
+
+    <ImageView
+        android:id="@+id/img_tiltpoints_cofre2"
+        android:layout_width="156dp"
+        android:layout_height="133dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_tiltpoints_titulo"
+        app:srcCompat="@drawable/pixil_frame_0__2_" />
+
+    <ImageView
+        android:id="@+id/img_tiltpoints_cofre3"
+        android:layout_width="156dp"
+        android:layout_height="133dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_tiltpoints_2"
+        app:srcCompat="@drawable/pixil_frame_0__2_" />
+
+    <Button
+        android:id="@+id/btn_tiltpoints_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#55ffe2"
+        android:text="100"
+        android:textColor="#04012D"
+        app:layout_constraintEnd_toEndOf="@+id/img_tiltpoints_cofre1"
+        app:layout_constraintStart_toStartOf="@+id/img_tiltpoints_cofre1"
+        app:layout_constraintTop_toBottomOf="@+id/img_tiltpoints_cofre1" />
+
+    <Button
+        android:id="@+id/btn_tiltpoints_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#55ffe2"
+        android:text="10.000"
+        android:textColor="#04012D"
+        app:layout_constraintEnd_toEndOf="@+id/img_tiltpoints_cofre"
+        app:layout_constraintStart_toStartOf="@+id/img_tiltpoints_cofre"
+        app:layout_constraintTop_toBottomOf="@+id/img_tiltpoints_cofre" />
+
+    <ImageButton
+        android:id="@+id/imgButton_tiltpoints_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:background="#04012D"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_tiltpoints_titulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        app:srcCompat="@drawable/casa__1_"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

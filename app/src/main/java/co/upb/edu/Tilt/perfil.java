@@ -48,13 +48,12 @@ public class perfil extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-/*
         tiltpoints.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(perfil.this, Tiltpoints.class);
                 startActivity(intent);
             }
-        });*/
+        });
     }
 }
