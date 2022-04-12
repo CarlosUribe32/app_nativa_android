@@ -356,12 +356,12 @@
             android:id="@+id/btnBuscarPerfil"
             android:layout_width="47dp"
             android:layout_height="49dp"
-            android:layout_marginStart="4dp"
+            android:layout_marginStart="16dp"
             android:backgroundTint="#04012D"
             app:layout_constraintBottom_toTopOf="@+id/scrollView_listaSeguidos"
-            app:layout_constraintStart_toEndOf="@+id/btn_listaSeguidos_home"
+            app:layout_constraintStart_toEndOf="@+id/imgButton_ListaSeguidos_home"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.523"
+            app:layout_constraintVertical_bias="0.476"
             app:srcCompat="@drawable/lupa_1_"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
@@ -369,15 +369,14 @@
             android:id="@+id/txtBuscarUsuarioPerfil"
             android:layout_width="138dp"
             android:layout_height="37dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="13dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Usuario"
             app:layout_constraintBottom_toTopOf="@+id/scrollView_listaSeguidos"
             app:layout_constraintStart_toEndOf="@+id/btnBuscarPerfil"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.629"
-            tools:ignore="TouchTargetSizeCheck" />
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

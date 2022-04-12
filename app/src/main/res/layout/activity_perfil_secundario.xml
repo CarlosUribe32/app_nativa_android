@@ -7,6 +7,32 @@
     android:background="#04012D"
     tools:context=".perfilSecundario">
 
+    <ImageButton
+        android:id="@+id/imgButton_perfilSecundario_perfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#04012D"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView_listaSeguidos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/usuario_1_1"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/imgButton_perfilSecundario_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#04012D"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView_listaSeguidos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/casa__1_"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
     <ImageView
         android:id="@+id/img_perfil_insignia6"
         android:layout_width="86dp"
@@ -76,10 +102,10 @@
         android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.06"
+        app:layout_constraintVertical_bias="0.136"
         app:srcCompat="@drawable/usuario__2_" />
 
     <TextView
@@ -91,10 +117,10 @@
         android:text="En Linea"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintHorizontal_bias="0.185"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_perfilSecundario_fotoPerfil"
-        app:layout_constraintVertical_bias="0.42" />
+        app:layout_constraintVertical_bias="0.45" />
 
     <TextView
         android:id="@+id/text_perfilSecundario_NombreUsuario"
@@ -107,10 +133,10 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintHorizontal_bias="0.658"
         app:layout_constraintStart_toEndOf="@+id/img_perfilSecundario_fotoPerfil"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.104" />
+        app:layout_constraintVertical_bias="0.187" />
 
     <TextView
         android:id="@+id/text_perfilSecundario_seguidores"
@@ -162,5 +188,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.552" />
+
+    <Button
+        android:id="@+id/btn_perfilSecundario_seguir_dejar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#080350"
+        android:text="Seguir"
+        android:textColor="#55FFE2"
+        app:layout_constraintBottom_toTopOf="@+id/text_perfilSecundario_seguidores"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
