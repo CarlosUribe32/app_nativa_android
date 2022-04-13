@@ -9,6 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     public static final String usuarioActual = "usuarioActual";
+    public static final String usuarioSeleccionado = "usuarioSeleccionado";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         acerca.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, perfil.class);
+                Intent intent = new Intent(MainActivity.this, AcercaDe.class);
                 startActivity(intent);
             }
         });
