@@ -6,10 +6,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
+import android.text.Layout;
 import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ScrollView;
+import android.widget.Space;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -18,9 +25,17 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ListaSeguidos extends AppCompatActivity {
+
     private FirebaseDatabase usuariosBD;
     private DatabaseReference losUsuariosBD;
+    private ScrollView myScroll;
+
+    private List<String> misSeguidos;
+    private TableLayout miTabla;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,11 +50,43 @@ public class ListaSeguidos extends AppCompatActivity {
         usuariosBD = FirebaseDatabase.getInstance();
         losUsuariosBD = usuariosBD.getReference("Usuarios");
 
+        //Inicializacion de la lista en la vista
+        inicializarLista(usuario);
+
         //Botones
         ImageButton btnListaSeguidosHome = (ImageButton) findViewById(R.id.imgButton_ListaSeguidos_home);
         ImageButton btnListaSeguidosPerfil = (ImageButton) findViewById(R.id.imgButton_ListaSeguidos_perfil);
         ImageButton btnBuscarPerfil = (ImageButton) findViewById(R.id.btnBuscarPerfil);
         inicializarBotones(btnListaSeguidosHome, btnListaSeguidosPerfil, btnBuscarPerfil, usuario);
+    }
+
+    private void inicializarLista(String usuario){
+        losUsuariosBD.child(usuario).child("listaSeguidos").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists()){
+                    misSeguidos = (List<String>) dataSnapshot.getValue();
+                }
+                else{
+                    misSeguidos = new ArrayList<String>();
+                }
+                miTabla = (TableLayout) findViewById(R.id.table_listaSeguidos);
+                miTabla.removeAllViews();
+
+                for (int i = 0; i < misSeguidos.size(); i++){
+                    View registro =  LayoutInflater.from(ListaSeguidos.this).inflate(R.layout.row_table_lista_seguidos_seguidores, null, false);
+                    TextView campoUsuario = (TextView) registro.findViewById(R.id.text_listaSeguidores_nombreUsuario);
+                    campoUsuario.setText(misSeguidos.get(i));
+                    miTabla.addView(registro);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
     }
 
     private void inicializarBotones(ImageButton home, ImageButton perfil, ImageButton buscar, String usuario){

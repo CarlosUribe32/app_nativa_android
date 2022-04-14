@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:id="@+id/img_listaSeguidores_perfil9"
+                    android:id="@+id/img_listaSeguidores_perfil"
                     android:layout_width="100dp"
                     android:layout_height="85dp"
                     android:layout_weight="1"
@@ -61,7 +61,7 @@
                     app:srcCompat="@drawable/usuario__2_" />
 
                 <TextView
-                    android:id="@+id/text_listaSeguidores_nombreUsuario8"
+                    android:id="@+id/text_listaSeguidores_nombreUsuario"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
