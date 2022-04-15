@@ -32,7 +32,6 @@ public class ListaSeguidos extends AppCompatActivity {
 
     private FirebaseDatabase usuariosBD;
     private DatabaseReference losUsuariosBD;
-    private ScrollView myScroll;
 
     private List<String> misSeguidos;
     private TableLayout miTabla;
