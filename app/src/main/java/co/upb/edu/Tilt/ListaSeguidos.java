@@ -10,6 +10,7 @@ import android.text.Layout;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ScrollView;
@@ -74,8 +75,18 @@ public class ListaSeguidos extends AppCompatActivity {
 
                 for (int i = 0; i < misSeguidos.size(); i++){
                     View registro =  LayoutInflater.from(ListaSeguidos.this).inflate(R.layout.row_table_lista_seguidos_seguidores, null, false);
-                    TextView campoUsuario = (TextView) registro.findViewById(R.id.text_listaSeguidores_nombreUsuario);
+                    Button campoUsuario = (Button) registro.findViewById(R.id.btn_listaSeguidores_nombreUsuario);
                     campoUsuario.setText(misSeguidos.get(i));
+                    campoUsuario.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent intent = new Intent(ListaSeguidos.this, perfilSecundario.class);
+                            intent.putExtra(MainActivity.usuarioActual, usuario);
+                            intent.putExtra(MainActivity.usuarioSeleccionado, campoUsuario.getText().toString());
+                            startActivity(intent);
+                            finish();
+                        }
+                    });
                     miTabla.addView(registro);
                 }
             }
@@ -111,7 +122,9 @@ public class ListaSeguidos extends AppCompatActivity {
                 EditText usuarioBuscado = (EditText) findViewById(R.id.txtBuscarUsuarioPerfil);
                 String sUsuarioBuscado = usuarioBuscado.getText().toString();
                 final boolean[] buscoUnaVez = {false};
-                if(!TextUtils.isEmpty(sUsuarioBuscado)){
+                if(sUsuarioBuscado.equals(usuario))
+                    Toast.makeText(ListaSeguidos.this, "Eres tu bro <3", Toast.LENGTH_LONG).show();
+                else if(!TextUtils.isEmpty(sUsuarioBuscado)){
                     losUsuariosBD.child(sUsuarioBuscado).addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -121,6 +134,7 @@ public class ListaSeguidos extends AppCompatActivity {
                                 intent.putExtra(MainActivity.usuarioSeleccionado, sUsuarioBuscado);
                                 startActivity(intent);
                                 buscoUnaVez[0] = true;
+                                finish();
                             }
                             else if(!buscoUnaVez[0]){
                                 Toast.makeText(ListaSeguidos.this, "Este usuario no existe", Toast.LENGTH_LONG).show();

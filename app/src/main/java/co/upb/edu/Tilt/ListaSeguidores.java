@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TableLayout;
 import android.widget.TextView;
@@ -66,8 +67,17 @@ public class ListaSeguidores extends AppCompatActivity {
 
                 for (int i = 0; i < misSeguidores.size(); i++){
                     View registro =  LayoutInflater.from(ListaSeguidores.this).inflate(R.layout.row_table_lista_seguidos_seguidores, null, false);
-                    TextView campoUsuario = (TextView) registro.findViewById(R.id.text_listaSeguidores_nombreUsuario);
+                    Button campoUsuario = (Button) registro.findViewById(R.id.btn_listaSeguidores_nombreUsuario);
                     campoUsuario.setText(misSeguidores.get(i));
+                    campoUsuario.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent intent = new Intent(ListaSeguidores.this, perfilSecundario.class);
+                            intent.putExtra(MainActivity.usuarioActual, usuario);
+                            intent.putExtra(MainActivity.usuarioSeleccionado, campoUsuario.getText().toString());
+                            startActivity(intent);
+                        }
+                    });
                     miTabla.addView(registro);
                 }
             }
