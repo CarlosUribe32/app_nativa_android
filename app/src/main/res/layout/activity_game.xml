@@ -8,39 +8,41 @@
     android:backgroundTint="#04012D"
     tools:context=".Game">
 
-    <TextView
-        android:id="@+id/txtTiltHome2"
-        android:layout_width="214dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginBottom="32dp"
-        android:fontFamily="@font/baloo_tammudu"
-        android:text="Name"
-        android:textColor="#FFFFFF"
-        app:layout_constraintHorizontal_bias="0.62"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="148dp"
-        android:layout_height="210dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
+        android:id="@+id/img_game_imagenJuego"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="5dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_game_nameJuego"
         app:srcCompat="@drawable/captura_de_pantalla_2022_04_03_212937" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="205dp"
-        android:layout_height="127dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
-        android:text="TextView"
+        android:id="@+id/txt_game_nameJuego"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/belgrano"
+        android:gravity="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTiltHome2" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_game_descripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/belgrano"
+        android:scrollbars="vertical"
+        android:text="TextView"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_game_imagenJuego" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
