@@ -31,6 +31,7 @@ public class perfilSecundario extends AppCompatActivity {
     private List<String> listaSeguidos;
     private List<String> listaSeguidores;
     private int seguidores;
+    private TextView numeroSeguidores;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +52,8 @@ public class perfilSecundario extends AppCompatActivity {
         ImageButton btnPerfilSecundarioPerfil = (ImageButton) findViewById(R.id.imgButton_perfilSecundario_perfil);
         Button btnSeguirNoseguir = (Button) findViewById(R.id.btn_perfilSecundario_seguir_dejar);
 
+
+        numeroSeguidores = (TextView) findViewById(R.id.text_perfilSecundario_numeroSeguidores);
         //Carga del perfil
         cargandoPerfil(usuarioBuscado, usuario, btnSeguirNoseguir);
 
@@ -63,7 +66,6 @@ public class perfilSecundario extends AppCompatActivity {
 
         TextView nombrePerfil = (TextView) findViewById(R.id.text_perfilSecundario_NombreUsuario);
         TextView infoPerfil = (TextView) findViewById(R.id.text_perfilSecundario_infoPerfil);
-        TextView numeroSeguidores = (TextView) findViewById(R.id.text_perfilSecundario_numeroSeguidores);
 
         nombrePerfil.setText(usuarioSecundario);
         losUsuariosBD.child(usuarioSecundario).addValueEventListener(new ValueEventListener() {
@@ -150,10 +152,11 @@ public class perfilSecundario extends AppCompatActivity {
                     listaSeguidores.remove(usuario);
                     listaSeguidos.remove(usuarioBuscado);
                     seguidores--;
-                    seguirNoseguir.setText("Dejar de seguir");
+                    seguirNoseguir.setText("Seguir");
                 }
                 losUsuariosBD.child(usuarioBuscado).child("listaSeguidores").setValue(listaSeguidores);
                 losUsuariosBD.child(usuario).child("listaSeguidos").setValue(listaSeguidos);
+                numeroSeguidores.setText(String.valueOf(seguidores));
             }
         });
     }
