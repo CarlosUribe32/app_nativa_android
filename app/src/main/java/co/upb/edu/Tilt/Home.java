@@ -24,8 +24,8 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Home extends AppCompatActivity {
-    public static int id = 0;
-
+    int id = 0;
+    public static String newid = "0";
     Juegos juegos;
     LinearLayout layoutJuegos;
     @Override
@@ -86,10 +86,24 @@ public class Home extends AppCompatActivity {
         });
     }
     private void CrearImageButton(){
+
+        String  aux, NombreAux;
         for(int i =0;i<juegos.getResults().size();i++){
             ImageButton imgBtn = new ImageButton(getApplicationContext());
             layoutJuegos.addView(imgBtn);
             imgBtn.setId(i);
+            NombreAux = String.valueOf(i);
+            ImageButton imgViews = (ImageButton) findViewById(i);
+            imgViews.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    id = juegos.getResults().get(view.getId()).getId();
+                    newid = String.valueOf(id);
+
+                    Intent intent = new Intent(Home.this, Game.class);
+                    startActivity(intent);
+                }
+            });
         }
     }
     private void ColocarImagenesDeJuegos(){
@@ -102,4 +116,5 @@ public class Home extends AppCompatActivity {
                     .into(imgBtn);
         }
     }
+
 }

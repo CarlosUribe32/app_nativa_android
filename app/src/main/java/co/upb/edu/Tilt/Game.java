@@ -1,5 +1,7 @@
 package co.upb.edu.Tilt;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.util.DisplayMetrics;
@@ -10,6 +12,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import java.util.*;
 
 public class Game extends AppCompatActivity {
     ImageView imagenJuego;
@@ -22,6 +25,9 @@ public class Game extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+        Intent thisIntent = getIntent();
+        String id = Home.newid;
+
 
         imagenJuego = (ImageView) findViewById(R.id.img_game_imagenJuego);
         nameJuego = (TextView) findViewById(R.id.txt_game_nameJuego);
@@ -34,18 +40,18 @@ public class Game extends AppCompatActivity {
         width = metrics.widthPixels; // ancho absoluto en pixels
         height = metrics.heightPixels; // alto absoluto en pixels
 
-        getPosts();
+        getPosts(id);
         descripcion.setMovementMethod(new ScrollingMovementMethod());
     }
 
-    private void getPosts() {
+    private void getPosts(String id) {
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://rawg.io/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         PostService postService = retrofit.create(PostService.class);
-        Call<Juego> call = postService.getJuego();
+        Call<Juego> call = postService.getJuego(id);
 
         call.enqueue(new Callback <Juego>() {
             @Override

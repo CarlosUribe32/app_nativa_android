@@ -10,7 +10,7 @@ import retrofit2.http.Path;
 public interface PostService {
     String API_ROUTE_Juego ="api/games/{id}?key=4b8cec93234b437eb0f8acfbd08c3485";
     @GET(API_ROUTE_Juego)
-    Call<Juego> getJuego(/*@Path("id") int id*/);
+    Call<Juego> getJuego(@Path("id") String id);
 
     String API_ROUTE_JUEGOS = "api/games?key=4b8cec93234b437eb0f8acfbd08c3485";
     @GET(API_ROUTE_JUEGOS)
