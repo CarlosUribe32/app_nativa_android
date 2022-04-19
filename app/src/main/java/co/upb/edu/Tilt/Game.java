@@ -50,19 +50,23 @@ public class Game extends AppCompatActivity {
         call.enqueue(new Callback <Juego>() {
             @Override
             public void onResponse(Call <Juego> call, Response <Juego> response) {
-            Picasso.get()
-                    .load(response.body().getBackground_image())
-                    .resize((width-100),(height/3))
-                    .into(imagenJuego);
+                if(response.isSuccessful()){
+                    Picasso.get()
+                            .load(response.body().getBackground_image())
+                            .resize((width-100),(height/3))
+                            .into(imagenJuego);
 
-            nameJuego.setText((CharSequence) response.body().getName());
-            descripcion.setText((CharSequence) response.body().getDescription().replaceAll("\\<.*?>",""));
+                    nameJuego.setText((CharSequence) response.body().getName());
+                    descripcion.setText((CharSequence) response.body().getDescription().replaceAll("\\<.*?>",""));
+
+                }else{
+                    Toast.makeText(getBaseContext(),"Error en el formato de la respuesta", Toast.LENGTH_SHORT).show();
+                }
 
             }
-
-
             @Override
             public void onFailure(Call<Juego> call, Throwable t) {
+                Toast.makeText(getBaseContext(),"Error de la respuesta", Toast.LENGTH_SHORT).show();
             }
         });
     }

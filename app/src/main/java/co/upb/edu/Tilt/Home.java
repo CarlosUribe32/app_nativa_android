@@ -7,10 +7,27 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
-public class Home extends AppCompatActivity {
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
+import java.util.Objects;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+public class Home extends AppCompatActivity {
+    public static int id = 0;
+
+    Juegos juegos;
+    LinearLayout layoutJuegos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +39,13 @@ public class Home extends AppCompatActivity {
         //Botones
         ImageButton btnPerfilHome = (ImageButton) findViewById(R.id.btnPerfilHome);
         inicializarBotones(btnPerfilHome, usuario);
+        //ImagenButton
+
+        //Layout
+        layoutJuegos = (LinearLayout) findViewById(R.id.LinearLayout_home);
+        getPosts();
+
+
     }
 
     private void inicializarBotones (ImageButton perfil, String usuario){
@@ -33,5 +57,49 @@ public class Home extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    private void getPosts(){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://rawg.io/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        PostService postService = retrofit.create(PostService.class);
+        Call<Juegos> call = postService.getJuegos();
+
+        call.enqueue(new Callback <Juegos>() {
+            @Override
+            public void onResponse(Call <Juegos> call, Response<Juegos> response) {
+                if(response.isSuccessful()){
+                    juegos = response.body();
+                    CrearImageButton();
+                    ColocarImagenesDeJuegos();
+                }else{
+                    Toast.makeText(getBaseContext(),"Error en el formato de la respuesta", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+            @Override
+            public void onFailure(Call<Juegos> call, Throwable t) {
+                Toast.makeText(getBaseContext(),"Error de la respuesta", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+    private void CrearImageButton(){
+        for(int i =0;i<juegos.getResults().size();i++){
+            ImageButton imgBtn = new ImageButton(getApplicationContext());
+            layoutJuegos.addView(imgBtn);
+            imgBtn.setId(i);
+        }
+    }
+    private void ColocarImagenesDeJuegos(){
+        ImageButton imgBtn;
+        for(int i=0; i<juegos.getResults().size();i++){
+            imgBtn = (ImageButton) findViewById(i);
+            Picasso.get()
+                    .load(juegos.getResults().get(i).getBackground_image())
+                    .resize(590,650)
+                    .into(imgBtn);
+        }
     }
 }
