@@ -35,14 +35,14 @@ public class MainActivity extends AppCompatActivity {
         acerca.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Home.class);
+                Intent intent = new Intent(MainActivity.this, AcercaDe.class);
                 startActivity(intent);
             }
         });
         creditos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Game.class);
+                Intent intent = new Intent(MainActivity.this, Creditos.class);
                 startActivity(intent);
             }
         });
