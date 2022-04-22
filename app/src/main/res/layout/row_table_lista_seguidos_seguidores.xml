@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/img_listaSeguidores_perfil"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/usuario__2_" />
+
+    <Button
+        android:id="@+id/btn_listaSeguidores_nombreUsuario"
+        android:layout_width="168dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#55ffe2"
+        android:text="Nombre Usuario"
+        android:textColor="#04012D" />
+
+    <Space
+        android:layout_width="61dp"
+        android:layout_height="wrap_content" />
+
+</TableRow>

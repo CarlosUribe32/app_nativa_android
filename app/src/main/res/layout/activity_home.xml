@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#04012D"
+    android:backgroundTint="#04012D"
+    tools:context=".Home">
+
+    <ImageButton
+        android:id="@+id/btnPerfilHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="88dp"
+        android:backgroundTint="#04012D"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollViewHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtTiltHome"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/usuario_1_1"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/txtTiltHome"
+        android:layout_width="141dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/baloo_tammudu"
+        android:text="Tilt"
+        android:textColor="#FFFFFF"
+        android:textSize="84sp"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollViewHome"
+        app:layout_constraintEnd_toStartOf="@+id/btnPerfilHome"
+        app:layout_constraintHorizontal_bias="0.62"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txtTiltersHome"
+        android:layout_width="189dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="11dp"
+        android:fontFamily="@font/baloo_tammudu"
+        android:text="Tilters top"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewNicoHome"
+        app:layout_constraintEnd_toStartOf="@+id/txtNoticiasHome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollViewHome"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txtNoticiasHome"
+        android:layout_width="189dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="19dp"
+        android:fontFamily="@font/baloo_tammudu"
+        android:text="Noticias"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnTorneoHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtTiltersHome"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollViewHome"
+        tools:ignore="MissingConstraints" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollViewHome"
+        android:layout_width="406dp"
+        android:layout_height="225dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="3dp"
+        android:autofillHints="Contenedot"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@+id/txtTiltersHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTiltHome"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:id="@+id/LinearLayout_home"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"/>
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/btnTorneoHome"
+        android:layout_width="161dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="15dp"
+        android:background="#913737"
+        android:backgroundTint="#25E1C1"
+        android:bottomRightRadius="10dp"
+        android:drawableRight="@drawable/copa_de_trofeo_silueta"
+        android:fontFamily="@font/baloo_tamma"
+        android:text="Torneos"
+        android:textSize="24sp"
+        app:barrierMargin="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnTendenciaHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewNicoHome"
+        app:layout_constraintTop_toBottomOf="@+id/txtNoticiasHome" />
+
+    <Button
+        android:id="@+id/btnTendenciaHome"
+        android:layout_width="161dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="23dp"
+        android:background="#913737"
+        android:backgroundTint="#25E1C1"
+        android:bottomRightRadius="10dp"
+        android:drawableRight="@drawable/fuego"
+        android:fontFamily="@font/baloo_tamma"
+        android:text="Tendencia"
+        android:textSize="24sp"
+        app:barrierMargin="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnNovedadesHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewCarlosHome"
+        app:layout_constraintTop_toBottomOf="@+id/btnTorneoHome" />
+
+    <Button
+        android:id="@+id/btnNovedadesHome"
+        android:layout_width="161dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="32dp"
+        android:background="#913737"
+        android:backgroundTint="#25E1C1"
+        android:bottomRightRadius="10dp"
+        android:drawableRight="@drawable/innovacion__3_"
+        android:fontFamily="@font/baloo_tamma"
+        android:text="NOVEDADES"
+        android:textSize="22sp"
+        app:barrierMargin="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewCarlosHome"
+        app:layout_constraintTop_toBottomOf="@+id/btnTendenciaHome" />
+
+    <ImageView
+        android:id="@+id/imageViewNicoHome"
+        android:layout_width="96dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewCarlosHome"
+        app:layout_constraintEnd_toStartOf="@+id/btnTorneoHome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTiltersHome"
+        app:srcCompat="@drawable/untitled_design" />
+
+    <ImageView
+        android:id="@+id/imageViewJeanHome"
+        android:layout_width="105dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnNovedadesHome"
+        app:layout_constraintHorizontal_bias="0.305"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewCarlosHome"
+        app:srcCompat="@drawable/untitled_design__1_" />
+
+    <ImageView
+        android:id="@+id/imageViewCarlosHome"
+        android:layout_width="100dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewJeanHome"
+        app:layout_constraintEnd_toStartOf="@+id/btnTendenciaHome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewNicoHome"
+        app:srcCompat="@drawable/untitled_design__2_" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
