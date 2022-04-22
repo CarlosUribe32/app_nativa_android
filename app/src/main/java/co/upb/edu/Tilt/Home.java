@@ -3,11 +3,14 @@ package co.upb.edu.Tilt;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.Space;
 import android.widget.Toast;
 
 import com.google.gson.JsonArray;
@@ -90,8 +93,12 @@ public class Home extends AppCompatActivity {
         String  aux, NombreAux;
         for(int i =0;i<juegos.getResults().size();i++){
             ImageButton imgBtn = new ImageButton(getApplicationContext());
+            Space space = new Space(getApplicationContext());
             layoutJuegos.addView(imgBtn);
+            layoutJuegos.addView(space);
             imgBtn.setId(i);
+            imgBtn.setBackgroundColor(Color.parseColor("#04012D"));
+            space.setMinimumWidth(30);
             NombreAux = String.valueOf(i);
             ImageButton imgViews = (ImageButton) findViewById(i);
             imgViews.setOnClickListener(new View.OnClickListener() {
